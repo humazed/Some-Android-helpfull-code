@@ -27,7 +27,7 @@ public void displaypdf() {
 }
 
 ///////////////////////////////////////////////////////////////////////////
-// convert file to byte[] in java7
+// convert file to byte[] in java7 from : http://stackoverflow.com/questions/858980/file-to-byte-in-java
 ///////////////////////////////////////////////////////////////////////////
 
 import java.nio.file.Files;
@@ -37,5 +37,7 @@ File fi = new File("myfile.jpg");
 byte[] fileContent = Files.readAllBytes(fi.toPath())
 
 ///////////////////////////////////////////////////////////////////////////
-// 
+// convert file to byte[] in java7 in one line
 ///////////////////////////////////////////////////////////////////////////
+
+byte[] array = Files.readAllBytes(new File("/path/to/file").toPath());
